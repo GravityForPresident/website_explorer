@@ -1,8 +1,13 @@
 from selenium import webdriver
 from selenium.webdriver.common.keys import Keys
 
-driver = webdriver.Firefox()
-driver.get("http://www.python.org")
+with open('inputFile.txt', 'r') as inputfile:
+	url = inputfile.readline().replace('\n', '')
+	depth = inputfile.readline().replace('\n', '')
+	browser = inputfile.readline().replace('\n', '')
+
+driver = webdriver.Chrome()
+driver.get(url)
 assert "Python" in driver.title
 elem = driver.find_element_by_name("q")
 elem.clear()
