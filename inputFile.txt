@@ -1,0 +1,4 @@
+Parameters: 1. line: url, 2. line: depth (integer), 3. line: browser (firefox, chrome, ie)
+http://www.python.org
+4
+firefox
